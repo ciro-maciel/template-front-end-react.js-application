@@ -1,0 +1,8 @@
+{
+  "name": "mOnitor",
+  "short_name": "mOnitor - ciro-maciel",
+  "icons": [{ "src": "img/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

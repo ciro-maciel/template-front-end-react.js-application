@@ -1,0 +1,71 @@
+name: deploy to Preview
+
+on:
+  pull_request:
+    branches: [prod]
+
+jobs:
+  worker:
+    # https://docs.github.com/en/free-pro-team@latest/actions/reference/specifications-for-github-hosted-runners
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Get code
+        uses: actions/checkout@v2
+
+      # https://docs.github.com/en/free-pro-team@latest/actions/guides/caching-dependencies-to-speed-up-workflows
+      - name: Cache
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: PATH_PREFIX=preview/${{ github.event.number }} npm run website:build:prod
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: AKIAT6H6ASAMTEJYGVU7
+          aws-secret-access-key: 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
+          aws-region: us-east-1
+
+      - name: Remove files to the test website with the AWS CLI
+        run: |
+          aws s3 rm s3://monitor-website-test/preview/${{ github.event.number }} --recursive
+
+      - name: Copy files to the test website with the AWS CLI
+        run: |
+          aws s3 sync ./www s3://monitor-website-test/preview/${{ github.event.number }} --acl public-read
+
+      - name: Invalidation distribution with the AWS CLI
+        run: |
+          aws cloudfront create-invalidation --distribution-id E1A07ZOXRSGPT0 --paths '/*'
+
+      - name: Message
+        if: success()
+        # https://octokit.github.io/rest.js/v18#pulls-create-review-comment
+        # uses: actions/github-script@v3
+        # with:
+        #   github-token: 44d2ec3c494fc32a1c8c3ffa955df0681a136489
+        #   script: |
+        #     github.pulls.createReviewComment({
+        #       commit_id: github.sha,
+        #       "path": "file1.txt",
+        #       body: '👋 Thanks for reporting!'
+        #     })
+        # https://github.com/unsplash/comment-on-pr
+        uses: unsplash/comment-on-pr@master
+        env:
+          GITHUB_TOKEN: 44d2ec3c494fc32a1c8c3ffa955df0681a136489
+        with:
+          msg: |
+            Deploy preview ready!
+            https://monitor.ciro-maciel.me/preview/${{ github.event.number }}/
+            built from ${{ github.sha }}

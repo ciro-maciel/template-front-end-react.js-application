@@ -1,5 +1,8 @@
 {
   "name": "monitor-website",
+  "sideEffects": [
+    "*.css"
+  ],
   "version": "1.27.0",
   "description": "mOnitor - downtime happens. Get notified!",
   "homepage": "http://monitor.ciro-maciel.me/",

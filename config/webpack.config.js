@@ -14,7 +14,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = ({ mode }) => {
   return {
     // https://webpack.js.org/configuration/devtool/
-    // devtool: 'source-map',
+    devtool: 'source-map',
     mode: mode === 'dev' ? 'development' : 'production',
     entry: './src/index.js',
     output: {
@@ -144,7 +144,7 @@ module.exports = ({ mode }) => {
               reportFilename: '../../analyzer.html',
             }),
           ]
-        : [new webpack.HotModuleReplacementPlugin()]),
+        : []),
     ],
     // https://webpack.js.org/configuration/resolve/#resolvealias
     resolve: {
@@ -152,6 +152,8 @@ module.exports = ({ mode }) => {
         components: path.resolve(__dirname, '../src/components/index.js'),
         containers: path.resolve(__dirname, '../src/containers/index.js'),
         providers: path.resolve(__dirname, '../src/providers/index.js'),
+        hooks: path.resolve(__dirname, '../src/hooks/index.js'),
+        utils: path.resolve(__dirname, '../src/utils/index.js'),
       },
     },
     ...(mode === 'dev' && {

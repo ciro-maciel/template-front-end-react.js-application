@@ -6,7 +6,10 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
-// const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
+const CopyPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = ({ mode }) => {
   return {
@@ -25,11 +28,9 @@ module.exports = ({ mode }) => {
     optimization: {
       // https://webpack.js.org/plugins/split-chunks-plugin/
       splitChunks: {
-        chunks: 'async',
+        chunks: 'all',
         maxSize: 600000,
         minChunks: 5,
-        maxAsyncRequests: 19,
-        maxInitialRequests: 19,
         cacheGroups: {
           vendors: {
             test: /[\\/]node_modules[\\/]/,
@@ -52,7 +53,6 @@ module.exports = ({ mode }) => {
           options: {
             babelrc: false,
             presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-transform-runtime'],
           },
         },
         {
@@ -99,6 +99,7 @@ module.exports = ({ mode }) => {
         },
       ],
     },
+    // https://webpack.js.org/plugins/terser-webpack-plugin/
     plugins: [
       new HtmlWebpackPlugin({
         template: 'src/index.html',
@@ -116,7 +117,7 @@ module.exports = ({ mode }) => {
       }),
       new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pt-br/),
       new Dotenv({
-        path: path.join(__dirname, `/${mode}/.env`),
+        path: path.join(__dirname, `/.env.${mode}`),
         safe: true,
         systemvars: true,
       }),
@@ -124,6 +125,26 @@ module.exports = ({ mode }) => {
         format: 'Build [:bar] :percent (:elapsed seconds)',
         clear: false,
       }),
+      ...(mode === 'prod'
+        ? [
+            new CleanWebpackPlugin(['../www/assets/**/*'], {
+              root: __dirname,
+              verbose: true,
+              allowExternal: true,
+            }),
+            new CopyPlugin({
+              patterns: [{ from: 'src/assets/img/', to: '../img/' }],
+            }),
+            new CompressionPlugin({
+              test: /\.js$/,
+            }),
+            new BundleAnalyzerPlugin({
+              analyzerMode: 'static',
+              openAnalyzer: false,
+              reportFilename: '../../analyzer.html',
+            }),
+          ]
+        : [new webpack.HotModuleReplacementPlugin()]),
     ],
     // https://webpack.js.org/configuration/resolve/#resolvealias
     resolve: {
@@ -133,5 +154,16 @@ module.exports = ({ mode }) => {
         providers: path.resolve(__dirname, '../src/providers/index.js'),
       },
     },
+    ...(mode === 'dev' && {
+      devServer: {
+        contentBase: path.join(__dirname, '../../../www/'),
+        index: 'index.html',
+        compress: true,
+        open: true,
+        port: 9090,
+        hot: true,
+        historyApiFallback: true,
+      },
+    }),
   };
 };

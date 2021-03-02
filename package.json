@@ -8,11 +8,11 @@
   "private": true,
   "author": {
     "name": "Ciro Cesar Maciel",
-    "email": "ciro.maciel@c37.co"
+    "email": "me@ciro-maciel.me"
   },
   "scripts": {
-    "website:develop:run": "webpack-dev-server --env.mode dev --config ./config/dev/webpack.config.js",
-    "website:build:prod": "webpack --env.mode prod --env.PATH_PREFIX=$PATH_PREFIX --config ./config/prod/webpack.config.js"
+    "website:develop:run": "webpack-dev-server --env.mode dev --config ./config/webpack.config.js",
+    "website:build:prod": "webpack --env.mode prod --config ./config/webpack.config.js"
   },
   "dependencies": {
     "antd": "^4.13.0",
@@ -37,7 +37,6 @@
     "@babel/plugin-proposal-throw-expressions": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "@semantic-release/changelog": "^5.0.1",

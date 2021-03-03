@@ -1,21 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet-async';
 
-import Off from './Off';
-import On from './On';
+import { Row, Col, Button, Input, Icon, Carousel, Form, BackTop } from 'antd';
 
-const Home = (props) => {
-  const { user } = props;
+import { Header, Footer } from '../../components';
 
-  // console.log('props', props);
+const Off = (props) => {
+  const {
+    // form,
+    // navigation,
+    // navigation: { history },
+  } = props;
 
-  // return user.data ? <On {...props} /> : <Off {...props} />;
-
-  return <Off {...props} />;
+  return (
+    <>
+      <Helmet>
+        <title>Workspace by ciro-maciel</title>
+      </Helmet>
+      <Header auth={{ user: null, setSession: null }} navigation={{ location: {}, Link: () => <>s</> }} />
+      <Row type="flex" justify="center">
+        <BackTop visibilityHeight={300} />
+      </Row>
+      <Footer />
+    </>
+  );
 };
 
-Home.propTypes = {
-  user: PropTypes.object,
+Off.propTypes = {
+  navigation: PropTypes.object,
+  form: PropTypes.object,
 };
 
-export default Home;
+export default Off;

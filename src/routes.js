@@ -1,21 +1,43 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { Switch, Route, Redirect, Link } from 'react-router-dom';
 
-// import utility from '@ciro-maciel/utility';
 import * as containers from './containers';
 
-// import { useUser } from 'hooks';
+import { useUser } from 'hooks';
+
+const NotFound = () => (
+  <div>
+    <h1>Sorry, can’t find that.</h1>
+    <p>
+      Go to
+      <Link to="/">Home</Link>
+    </p>
+  </div>
+);
+
+const PriveteRoute = ({ isLogged, ...props }) => (isLogged ? <Route {...props} /> : <Redirect to="/auth" />);
+
+PriveteRoute.propTypes = {
+  isLogged: PropTypes.bool,
+};
+
+const AuthRoute = ({ isLogged }) => (isLogged ? <Redirect to="/" /> : <Redirect to="/auth" />);
+
+AuthRoute.propTypes = {
+  isLogged: PropTypes.bool,
+};
 
 const Routes = () => {
-  // const user = useUser();
+  const user = useUser();
+  const isLogged = !!user.data;
 
   return (
     <Switch>
-      <Route exact path="/auth" type="forAuth" user={{ data: null }} component={containers.Auth} />
-
-      <Route exact path="/" user={{ data: {} }} component={containers.Home} />
-
-      <Redirect to="/" />
+      <Route exact path="/" component={containers.Home} />
+      <AuthRoute exact path="/auth" isLogged={isLogged} component={containers.Auth} />
+      <PriveteRoute exact path="/board" isLogged={isLogged} component={containers.Board} />
+      <Route component={NotFound} />
     </Switch>
   );
 };

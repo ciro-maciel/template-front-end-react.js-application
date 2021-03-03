@@ -23,3 +23,20 @@ body,
   height: 100%;
   color: rgba(0, 0, 0, 0.65);
 }
+
+@media (max-width: 768px) {
+  .hide-on-md {
+    display: none !important;
+  }
+  .show-on-md {
+    display: inline-block !important;
+  }
+}
+@media (max-width: 576px) {
+  .hide-on-sm {
+    display: none !important;
+  }
+  .show-on-sm {
+    display: inline-block !important;
+  }
+}

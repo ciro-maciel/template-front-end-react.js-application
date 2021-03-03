@@ -1,11 +1,12 @@
-import React, { useRef, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
 import { Row, Col } from 'antd';
 
+import { Link } from 'components';
+
 import { images } from 'utils';
 
-const Header = ({ navigation: { Link, history } }) => {
+const Header = () => {
   return (
     <Row
       type="flex"
@@ -14,69 +15,48 @@ const Header = ({ navigation: { Link, history } }) => {
         height: '60px',
         width: '100%',
         padding: '0 10px',
-        alignItems: 'center',
         display: 'flex',
+        justifyContent: 'center',
       }}
     >
-      <Col span={24} style={{ alignItems: 'center', display: 'flex' }}>
-        <div>
-          <Link to="/">
-            <img src={images.logo} alt="Workspace - ciro-maciel.me" width="150px" />
-          </Link>
-        </div>
-        <div style={{ marginLeft: 'auto' }}>
-          <Link
-            className="hide-on-mobile-sm"
-            to="/#"
-            onClick={(e) => {
-              e.preventDefault();
-
-              if (
-                document.querySelector('#Smallchat > iframe') &&
-                document.querySelector('#Smallchat > iframe').contentWindow.document.querySelector('.Launcher-icon')
-              ) {
-                document
-                  .querySelector('#Smallchat > iframe')
-                  .contentWindow.document.querySelector('.Launcher-icon')
-                  .querySelector('.Launcher-icon')
-                  .click();
-              }
-            }}
-          >
-            Suporte
-          </Link>
-          <span className="hide-on-mobile-md" style={{ margin: '0 5px' }}>
-            |
-          </span>
-          <Link className="hide-on-mobile-md" to="/#price">
-            Preços
-          </Link>
-          <span className="hide-on-mobile-md" style={{ margin: '0 5px' }}>
-            |
-          </span>
-          <Link className="hide-on-mobile-md" to="/auth">
-            comece Já
-          </Link>
-          <span className="hide-on-mobile-md" style={{ margin: '0 5px' }}>
-            |
-          </span>
-          <Link className="hide-on-mobile-md" to="/changelog">
-            o que há de Novo?
-          </Link>
-          <span className="hide-on-mobile-md" style={{ margin: '0 5px' }}>
-            |
-          </span>
-          <a className="hide-on-mobile-md" href="https://ciro-maciel.me/" target="_blank">
-            sobre Nós
-          </a>
-        </div>
-      </Col>
+      <Row style={{ maxWidth: '1440px', width: '100%', height: '100%', padding: '0 10px' }}>
+        <Col span={24} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div>
+            <Link to="/">
+              <img src={images.logo} alt="... - ciro-maciel.me" width="130px" />
+            </Link>
+          </div>
+          <div>
+            <Link className="hide-on-sm" to="/#">
+              Suporte
+            </Link>
+            <span className="hide-on-sm" style={{ margin: '0 5px' }}>
+              |
+            </span>
+            <Link className="hide-on-sm" to="/#price">
+              Preços
+            </Link>
+            <span className="hide-on-sm" style={{ margin: '0 5px' }}>
+              |
+            </span>
+            <Link to="/auth">comece Já</Link>
+            <span className="hide-on-sm" style={{ margin: '0 5px' }}>
+              |
+            </span>
+            <Link className="hide-on-sm" to="/changelog">
+              o que há de Novo?
+            </Link>
+            <span className="hide-on-sm" style={{ margin: '0 5px' }}>
+              |
+            </span>
+            <Link className="hide-on-sm" to="https://ciro-maciel.me/" target="_blank">
+              sobre Nós
+            </Link>
+          </div>
+        </Col>
+      </Row>
     </Row>
   );
-};
-
-Header.propTypes = {
-  navigation: PropTypes.object,
 };
 
 export default Header;

@@ -35,7 +35,10 @@ const Routes = () => {
   return (
     <Switch>
       <Route exact path="/" component={containers.Home} />
+      <Route exact path="/changelog" isLogged={isLogged} component={containers.Changelog} />
+
       <AuthRoute exact path="/auth" isLogged={isLogged} component={containers.Auth} />
+
       <PriveteRoute exact path="/board" isLogged={isLogged} component={containers.Board} />
       <Route component={NotFound} />
     </Switch>

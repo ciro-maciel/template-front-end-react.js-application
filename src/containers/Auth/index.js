@@ -7,9 +7,16 @@ import { UserOutlined, MailOutlined, CheckOutlined } from '@ant-design/icons';
 
 import { Header, Body, Footer, Widget } from 'components';
 
+import { useUser, useNetInfo } from 'hooks';
+
 import { images } from 'utils';
 
 const Auth = () => {
+  const user = useUser();
+  const netInfo = useNetInfo();
+
+  const [values, setValues] = useState({ email: new URLSearchParams(location.search).get('email') });
+
   return (
     <>
       <Helmet>
@@ -24,8 +31,8 @@ const Auth = () => {
             </div>
             <Typography.Title level={3}>Construído para Pessoas</Typography.Title>
             <Typography.Paragraph>
-              Ao clicar em “Login com e-mail” acima, você reconhece que leu e compreendeu e concorda em Espaço de
-              trabalho Termos e Condições e Política de Privacidade.
+              Ao clicar em “Login com e-mail” acima, você reconhece que leu e compreendeu e concorda com os Termos e
+              Condições e Política de Privacidade.
             </Typography.Paragraph>
           </Col>
           <Col xs={24} md={12} lg={8}>

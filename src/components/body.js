@@ -15,7 +15,7 @@ const Body = (props) => {
         ...style,
       }}
     >
-      <Row type="flex" style={{ maxWidth: '1440px', width: '100%', padding: '0 10px' }}>
+      <Row type="flex" style={{ maxWidth: '1440px', width: '100%', padding: '0 10px', justifyContent: 'center' }}>
         {children}
       </Row>
     </Row>

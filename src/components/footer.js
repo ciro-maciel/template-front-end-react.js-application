@@ -18,7 +18,21 @@ export default function() {
       }}
     >
       <Row style={{ maxWidth: '1440px', width: '100%', height: '100%', padding: '0 10px' }}>
-        <Col md={12} xs={12} style={{ display: 'flex', alignItems: 'center' }} />
+        <Col md={12} xs={12} style={{ display: 'flex', alignItems: 'center' }}>
+          <small>© 2021 ciro-maciel</small>
+          <span className="hide-on-sm" style={{ margin: '0 5px' }}>
+            |
+          </span>
+          <Link className="hide-on-sm" to="/terms">
+            <small>Termos</small>
+          </Link>
+          <span className="hide-on-sm" style={{ margin: '0 5px' }}>
+            |
+          </span>
+          <Link className="hide-on-sm" to="/privacy">
+            <small>Privacidade</small>
+          </Link>
+        </Col>
         <Col md={12} xs={12} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
           <div>
             <small className="hide-on-sm"> feito com</small>

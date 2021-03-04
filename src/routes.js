@@ -45,6 +45,8 @@ const Routes = () => {
     <Switch>
       <Route exact path="/" component={containers.Home} />
       <Route exact path="/changelog" isLogged={isLogged} component={containers.Changelog} />
+      <Route exact path="/terms" isLogged={isLogged} component={containers.Terms} />
+      <Route exact path="/privacy" isLogged={isLogged} component={containers.Privacy} />
 
       <AuthRoute exact path="/auth" isLogged={isLogged} component={containers.Auth} />
 

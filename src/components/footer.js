@@ -30,7 +30,7 @@ export default function() {
             |
           </span>
           <Link className="hide-on-sm" to="/privacy">
-            <small>Privacidade</small>
+            <small>Política de Privacidade</small>
           </Link>
         </Col>
         <Col md={12} xs={12} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>

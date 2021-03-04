@@ -1,4 +1,5 @@
 export { default as Home } from './Home';
+export { default as Price } from './Price';
 
 export { default as Changelog } from './Changelog';
 export { default as Terms } from './Terms';

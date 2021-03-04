@@ -38,7 +38,7 @@ const Header = () => {
               <span className="hide-on-sm" style={{ margin: '0 5px' }}>
                 |
               </span>
-              <Link className="hide-on-sm" to="/#price">
+              <Link className="hide-on-sm" to="/price">
                 Preços
               </Link>
               <span className="hide-on-sm" style={{ margin: '0 5px' }}>

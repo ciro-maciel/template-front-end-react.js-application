@@ -55,7 +55,7 @@ const HeaderIcon = function(props) {
 function HeaderText(props) {
   const { children, style } = props;
   return (
-    <h3 {...props} style={{ margin: '0', fontWeight: 'bold', ...style }}>
+    <h3 {...props} style={{ margin: '0', fontWeight: 'bold', fontSize: '15px', ...style }}>
       {children}
     </h3>
   );
@@ -103,7 +103,7 @@ HeaderContent.Option = HeaderOption;
 function BodyContent(props) {
   const { children, style } = props;
   return (
-    <div {...props} style={{ flex: '1', padding: '0px 10px 10px', ...style }}>
+    <div {...props} style={{ flex: '1', padding: '0px 16px 16px 16px', ...style }}>
       {children}
     </div>
   );

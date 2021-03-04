@@ -2,17 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route, Redirect, Link } from 'react-router-dom';
 
-import * as containers from './containers';
-
 import { useUser } from 'hooks';
 
+import * as containers from './containers';
+
 const NotFound = () => (
-  <div>
-    <h1>Sorry, can’t find that.</h1>
-    <p>
-      Go to
-      <Link to="/">Home</Link>
-    </p>
+  <div
+    style={{
+      height: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}
+  >
+    <div>
+      <h1>Sorry, can’t find that.</h1>
+      <p>
+        Go to {` `}
+        <Link to="/">Home</Link>
+      </p>
+    </div>
   </div>
 );
 
@@ -22,7 +31,7 @@ PriveteRoute.propTypes = {
   isLogged: PropTypes.bool,
 };
 
-const AuthRoute = ({ isLogged }) => (isLogged ? <Redirect to="/" /> : <Redirect to="/auth" />);
+const AuthRoute = ({ isLogged, ...props }) => (isLogged ? <Redirect to="/" /> : <Route {...props} />);
 
 AuthRoute.propTypes = {
   isLogged: PropTypes.bool,
@@ -40,6 +49,7 @@ const Routes = () => {
       <AuthRoute exact path="/auth" isLogged={isLogged} component={containers.Auth} />
 
       <PriveteRoute exact path="/board" isLogged={isLogged} component={containers.Board} />
+
       <Route component={NotFound} />
     </Switch>
   );

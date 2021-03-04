@@ -15,7 +15,7 @@ const Body = (props) => {
         ...style,
       }}
     >
-      <Row gutter={12} style={{ maxWidth: '1440px', width: '100%', height: '100%', padding: '0 10px' }}>
+      <Row type="flex" style={{ maxWidth: '1440px', width: '100%', padding: '0 10px' }}>
         {children}
       </Row>
     </Row>

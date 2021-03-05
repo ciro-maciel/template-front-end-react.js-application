@@ -13,7 +13,6 @@ const Header = () => {
 
   return (
     <Row
-      type="flex"
       style={{
         borderBottom: '1px solid #ddd',
         height: '60px',

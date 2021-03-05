@@ -4,18 +4,25 @@ import PropTypes from 'prop-types';
 import { Row } from 'antd';
 
 const Body = (props) => {
-  const { children, style } = props;
+  const { children, style, ...rest } = props;
   return (
     <Row
-      type="flex"
       justify="center"
       style={{
         minHeight: 'calc(100vh - 100px)',
         width: '100%',
-        ...style,
+        padding: '0 10px',
       }}
     >
-      <Row type="flex" style={{ maxWidth: '1440px', width: '100%', padding: '0 10px', justifyContent: 'center' }}>
+      <Row
+        style={{
+          maxWidth: '1440px',
+          width: '100%',
+          padding: '20px 0px',
+          ...style,
+        }}
+        {...rest}
+      >
         {children}
       </Row>
     </Row>

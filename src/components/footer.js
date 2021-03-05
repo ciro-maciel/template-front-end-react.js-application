@@ -7,7 +7,6 @@ import { Link } from 'components';
 export default function() {
   return (
     <Row
-      type="flex"
       style={{
         borderTop: '1px solid #ddd',
         height: '40px',

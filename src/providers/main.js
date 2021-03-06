@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import { HelmetProvider } from 'react-helmet-async';
 
-import { UserProvider, StoreProvider } from '.';
+import { AccountProvider, StoreProvider } from '.';
 
 const MainProvider = ({ children }) => (
   <StoreProvider>
-    <UserProvider>
+    <AccountProvider>
       <HelmetProvider>{children}</HelmetProvider>
-    </UserProvider>
+    </AccountProvider>
   </StoreProvider>
 );
 

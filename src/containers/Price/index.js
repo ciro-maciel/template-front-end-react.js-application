@@ -36,7 +36,7 @@ const Price = () => {
 
         <Row gutter={16} style={{ background: 'rgb(236, 236, 236)', padding: '16px' }}>
           <Col xs={24} md={6}>
-            <Card title="Free" style={{ textAlign: 'center', height: '100%' }}>
+            <Card title={<Typography.Title>Free</Typography.Title>} style={{ textAlign: 'center', height: '100%' }}>
               <span>
                 Basico para uso Pessoal
                 <br />
@@ -64,7 +64,7 @@ const Price = () => {
             </Card>
           </Col>
           <Col xs={24} md={6}>
-            <Card title="Maker" style={{ textAlign: 'center', height: '100%' }}>
+            <Card title={<Typography.Title>Maker</Typography.Title>} style={{ textAlign: 'center', height: '100%' }}>
               <span>Funcionalidades profissionais para você crescer</span>
 
               <ul style={{ textAlign: 'left', margin: '16px 0' }}>
@@ -88,7 +88,7 @@ const Price = () => {
             </Card>
           </Col>
           <Col xs={24} md={6}>
-            <Card title="Startup" style={{ textAlign: 'center', height: '100%' }}>
+            <Card title={<Typography.Title>Startup</Typography.Title>} style={{ textAlign: 'center', height: '100%' }}>
               <span>Damos suporte para o crescimento de sua Empresa</span>
 
               <ul style={{ textAlign: 'left', margin: '16px 0' }}>
@@ -112,7 +112,7 @@ const Price = () => {
             </Card>
           </Col>
           <Col xs={24} md={6}>
-            <Card title="Business" style={{ textAlign: 'center', height: '100%' }}>
+            <Card title={<Typography.Title>Business</Typography.Title>} style={{ textAlign: 'center', height: '100%' }}>
               <span>Todas as nossas melhores ferramentas, suporte e serviços</span>
 
               <ul style={{ textAlign: 'left', margin: '16px 0' }}>
@@ -139,7 +139,7 @@ const Price = () => {
 
         <Row gutter={16} style={{ padding: '32px 0', maxWidth: '1000px', width: '100%' }}>
           <Row style={{ display: 'block', width: '100%', textAlign: 'center' }}>
-            <Typography.Title>Perguntas frequentes</Typography.Title>
+            <Typography.Title>Respostas a algumas perguntas que você possa ter</Typography.Title>
           </Row>
 
           <Col xs={24} md={12}>
@@ -166,7 +166,7 @@ const Price = () => {
               excluir sua conta por completo.
             </Typography.Paragraph>
 
-            <Typography.Title level={3}>Qual é a sua política de reembolso?</Typography.Title>
+            <Typography.Title level={3}>Se eu não gostar do mOnitor, posso solicitar um reembolso?</Typography.Title>
             <Typography.Paragraph>
               Caso você não esteja satisfeito com o serviço, você pode solicitar um reembolso em 10 dias a partir do seu
               último pagamento.

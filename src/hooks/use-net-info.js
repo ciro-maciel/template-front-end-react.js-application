@@ -7,7 +7,7 @@ export default () => {
   useLayoutEffect(() => {
     setTimeout(() => {
       // const netData = utility.net.info.data;
-      const netData = {};
+      const netData = { ip: '', region: '', country_code_iso3: '' };
 
       // console.log('aaa', utility.net.info.data);
       // todo - colocar interval

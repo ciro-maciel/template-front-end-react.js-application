@@ -36,7 +36,7 @@ export default function() {
           <div>
             <small className="hide-on-sm"> feito com</small>
             <small> ❤️ por </small>
-            <Link href="https://ciro-maciel.me" target="_blank">
+            <Link to="https://ciro-maciel.me" target="_blank">
               <small>ciro-maciel.me</small>
             </Link>
           </div>

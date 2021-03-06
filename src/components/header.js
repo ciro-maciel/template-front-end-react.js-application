@@ -1,15 +1,19 @@
 import React from 'react';
 
-import { Row, Col } from 'antd';
+import { Row, Col, Dropdown, Menu } from 'antd';
+import { UserOutlined, LogoutOutlined, DashboardOutlined, CommentOutlined, DownOutlined } from '@ant-design/icons';
 
-import { useUser } from 'hooks';
+import { useHistory } from 'react-router-dom';
+
+import { useAccount } from 'hooks';
 
 import { Link } from 'components';
 
 import { images } from 'utils';
 
 const Header = () => {
-  const user = useUser();
+  const account = useAccount();
+  const history = useHistory();
 
   return (
     <Row
@@ -29,9 +33,9 @@ const Header = () => {
               <img src={images.logo} alt="... - ciro-maciel.me" width="130px" />
             </Link>
           </div>
-          {!user.data ? (
+          {!account.data ? (
             <div>
-              <Link className="hide-on-sm" to="/#">
+              <Link className="hide-on-sm" to="/support">
                 Suporte
               </Link>
               <span className="hide-on-sm" style={{ margin: '0 5px' }}>
@@ -58,7 +62,50 @@ const Header = () => {
               </Link>
             </div>
           ) : (
-            <div>ds</div>
+            <Dropdown
+              trigger={['click']}
+              overlay={
+                <Menu>
+                  <Menu.Item key="dashboard">
+                    <Link to="/dashboard">
+                      <DashboardOutlined /> Dashboard
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="support">
+                    <Link to="/support">
+                      <CommentOutlined /> Suporte
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Divider />
+                  <Menu.Item
+                    key="logout"
+                    onClick={() => {
+                      user.select();
+                      history.push('/');
+                    }}
+                  >
+                    <Link>
+                      <LogoutOutlined /> Desconectar
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Divider />
+                  <Menu.Item key="about">
+                    <Link to="http://ciro-maciel.me/" target="_blank">
+                      sobre o mOnitor
+                    </Link>
+                  </Menu.Item>
+                </Menu>
+              }
+              placement="bottomCenter"
+            >
+              <Link>
+                <UserOutlined style={{ fontSize: '18px' }} />
+                {` `}
+                {account.data.email}
+                {` `}
+                <DownOutlined />
+              </Link>
+            </Dropdown>
           )}
         </Col>
       </Row>

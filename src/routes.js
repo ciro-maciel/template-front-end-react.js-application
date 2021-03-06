@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route, Redirect, Link } from 'react-router-dom';
 
-import { useUser } from 'hooks';
+import { useAccount } from 'hooks';
 
 import * as containers from './containers';
 
@@ -38,21 +38,19 @@ AuthRoute.propTypes = {
 };
 
 const Routes = () => {
-  const user = useUser();
-  const isLogged = !!user.data;
+  const account = useAccount();
+  const isLogged = !!account.data;
 
   return (
     <Switch>
       <Route exact path="/" component={containers.Home} />
       <Route exact path="/price" isLogged={isLogged} component={containers.Price} />
+      <Route exact path="/support" isLogged={isLogged} component={containers.Support} />
       <Route exact path="/changelog" isLogged={isLogged} component={containers.Changelog} />
       <Route exact path="/terms" isLogged={isLogged} component={containers.Terms} />
       <Route exact path="/privacy" isLogged={isLogged} component={containers.Privacy} />
-
       <AuthRoute exact path="/auth" isLogged={isLogged} component={containers.Auth} />
-
-      <PriveteRoute exact path="/board" isLogged={isLogged} component={containers.Board} />
-
+      <PriveteRoute exact path="/dashboard" isLogged={isLogged} component={containers.Dashboard} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -11,14 +11,14 @@ const Body = (props) => {
       style={{
         minHeight: 'calc(100vh - 100px)',
         width: '100%',
-        padding: '0 10px',
+        padding: '0 8px',
       }}
     >
       <Row
         style={{
           maxWidth: '1440px',
           width: '100%',
-          padding: '20px 0px',
+          padding: '16px 0px',
           ...style,
         }}
         {...rest}
@@ -30,7 +30,7 @@ const Body = (props) => {
 };
 
 Body.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   style: PropTypes.object,
 };
 

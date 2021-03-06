@@ -1,5 +1,5 @@
-export { UserContext } from './user';
-export { UserProvider } from './user';
+export { AccountContext } from './account';
+export { AccountProvider } from './account';
 
 export { default as StoreProvider } from './store';
 

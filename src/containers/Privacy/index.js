@@ -15,7 +15,7 @@ const Privecy = () => {
       </Helmet>
       <Header />
       <Body style={{ maxWidth: '900px' }}>
-        <Row style={{ justifyContent: 'center', marginBottom: '32px', width: '100%' }}>
+        <Row style={{ justifyContent: 'center', marginBottom: '24px', width: '100%' }}>
           <Typography.Title>
             <LockOutlined style={{ fontSize: '55px' }} />
             {'  '}

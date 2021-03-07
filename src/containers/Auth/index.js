@@ -76,7 +76,7 @@ const Auth = () => {
                       .then(({ tokenValidate }) => {
                         if (tokenValidate.code === 200) {
                           account.select(tokenValidate);
-                          history.push('/board');
+                          history.push('/dashboard');
                         }
                       });
                   }

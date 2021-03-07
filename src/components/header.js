@@ -80,7 +80,7 @@ const Header = () => {
                   <Menu.Item
                     key="logout"
                     onClick={() => {
-                      user.select();
+                      account.select();
                       history.push('/');
                     }}
                   >

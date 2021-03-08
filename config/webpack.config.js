@@ -12,6 +12,8 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = ({ mode }) => {
+  console.log('mode', mode);
+
   return {
     // https://webpack.js.org/configuration/devtool/
     devtool: 'source-map',

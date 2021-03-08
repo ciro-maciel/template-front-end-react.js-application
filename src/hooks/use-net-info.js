@@ -1,12 +1,12 @@
 import { useState, useLayoutEffect } from 'react';
-import { network } from '@ciro-maciel/utility';
+import utility from '@ciro-maciel/utility';
 
 export default () => {
   const [netInfo, setNetInfo] = useState();
 
   useLayoutEffect(() => {
     setTimeout(() => {
-      const netData = network.info.data;
+      const netData = utility.network.info.data;
 
       setNetInfo({
         ip: netData.ip,

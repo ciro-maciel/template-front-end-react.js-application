@@ -14,12 +14,12 @@
     "email": "me@ciro-maciel.me"
   },
   "scripts": {
-    "website:develop:run": "webpack serve --env mode=dev --config ./config/webpack.config.js",
-    "website:build:prod": "webpack --env mode=prod --config ./config/webpack.config.js"
+    "website:develop:run": "webpack serve --env=dev --config ./config/webpack.config.js",
+    "website:build:prod": "webpack --env=prod --config ./config/webpack.config.js"
   },
   "dependencies": {
     "@ant-design/icons": "^4.5.0",
-    "@ciro-maciel/utility": "^2.2.14",
+    "@ciro-maciel/utility": "^2.2.15",
     "antd": "^4.13.1",
     "jwt-decode": "^3.1.2",
     "moment": "^2.29.1",
@@ -29,32 +29,12 @@
     "react-helmet-async": "^1.0.9",
     "react-router-dom": "^5.2.0",
     "showdown": "^1.9.1",
-    "use-http": "^1.0.17"
+    "use-http": "^1.0.18"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.0",
-    "@babel/core": "^7.13.8",
-    "@babel/plugin-proposal-class-properties": "^7.13.0",
-    "@babel/plugin-proposal-decorators": "^7.13.5",
-    "@babel/plugin-proposal-export-namespace-from": "^7.12.13",
-    "@babel/plugin-proposal-function-sent": "^7.12.13",
-    "@babel/plugin-proposal-json-strings": "^7.13.8",
-    "@babel/plugin-proposal-numeric-separator": "^7.12.13",
-    "@babel/plugin-proposal-throw-expressions": "^7.12.13",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-syntax-import-meta": "^7.10.4",
-    "@babel/preset-env": "^7.13.9",
-    "@babel/preset-react": "^7.12.13",
+    "@ciro-maciel/webpack-config": "^1.0.2",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-loader": "^8.2.2",
-    "babel-plugin-import": "^1.13.3",
-    "clean-webpack-plugin": "^3.0.0",
-    "compression-webpack-plugin": "^7.1.2",
-    "copy-webpack-plugin": "^8.0.0",
-    "css-loader": "^5.1.1",
-    "dotenv-webpack": "^7.0.1",
     "eslint": "^7.21.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",
@@ -63,19 +43,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "html-webpack-plugin": "^5.3.0",
-    "image-minimizer-webpack-plugin": "^2.2.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^9.0.0",
-    "prettier": "^2.2.1",
-    "progress-bar-webpack-plugin": "^2.1.0",
-    "semantic-release": "^17.4.1",
-    "style-loader": "^2.0.0",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.24.4",
-    "webpack-bundle-analyzer": "^4.4.0",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "semantic-release": "^17.4.1"
   },
   "eslintIgnore": [
     "node_modules/*",

@@ -8,7 +8,6 @@ import { worker } from 'utils';
 
 import Routes from './routes';
 
-import 'antd/dist/antd.less';
 import './assets/css/style.css';
 
 const Index = () => {

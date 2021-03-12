@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/cm-monitor/website/compare/v1.1.0...v1.1.1) (2021-03-12)
+
+
+### Bug Fixes
+
+* service worker ([33dd889](https://github.com/cm-monitor/website/commit/33dd889d477fec72530fc49d79520c62115f4b19))
+
 # [1.1.0](https://github.com/cm-monitor/website/compare/v1.0.1...v1.1.0) (2021-03-12)
 
 

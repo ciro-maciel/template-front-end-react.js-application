@@ -1,4 +1,4 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 export default {
   parseChangelog: (htmlString) => {
@@ -10,7 +10,7 @@ export default {
 
         htmlString = htmlString.replace(
           new RegExp(formatedItem, 'g'),
-          `- ${moment(item.replace('(', '').replace(')', '')).format('dddd[,] LL')}`
+          `- ${dayjs(item.replace('(', '').replace(')', '')).format('dddd, MMMM D, YYYY')}`
         );
       });
 

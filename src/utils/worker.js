@@ -1,25 +1,18 @@
-const worker = () => {
-  // if (
-  //     process.env.NODE_ENV &&
-  //     process.env.NODE_ENV === "production" &&
-  //   "serviceWorker" in navigator
-  // ) {
-  //   window.addEventListener("load", function() {
-  //     navigator.serviceWorker
-  //       .register(process.env.PUBLIC_URL + "/worker.js")
-  //       .then(function(registration) {
-  //         console.log(
-  //           "ServiceWorker registration successful with scope: ",
-  //           registration.scope
-  //         );
-  //       })
-  //       .catch(function(err) {
-  //         console.log("ServiceWorker registration failed: ", err);
-  //       });
-  //   });
-  // }
+export default () => {
+  const { NODE_ENV } = process.env;
+
+  if (NODE_ENV && NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker
+        .register('/assets/service-worker.js')
+        .then(function (registration) {
+          console.log('👩🏻‍🔧 Workers 👨🏽‍🔧 registered: ', registration.scope);
+        })
+        .catch(function (err) {
+          console.log('👩🏻‍🔧 Workers 👨🏽‍🔧 registration failed: ', err);
+        });
+    });
+  }
 
   return true;
 };
-
-export default worker;

@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route, Redirect, Link } from 'react-router-dom';
 
-import { network } from '@ciro-maciel/utility';
-
 import { useAccount } from 'hooks';
 
 import * as containers from './containers';
@@ -40,7 +38,6 @@ AuthRoute.propTypes = {
 };
 
 const Routes = () => {
-  network.info.load();
   const account = useAccount();
   const isLogged = !!account.data;
 

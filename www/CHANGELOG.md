@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/cm-monitor/website/compare/v1.0.0...v1.0.1) (2021-03-12)
+
+
+### Performance Improvements
+
+* **webpack:** update process ([1cf2262](https://github.com/cm-monitor/website/commit/1cf22621cccd4a677cf2582ee7642efd09572814))
+
 # 1.0.0 (2021-03-12)
 
 

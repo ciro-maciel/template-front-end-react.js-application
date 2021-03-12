@@ -1,6 +1,6 @@
 {
   "name": "monitor-website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mOnitor - downtime happens. Get notified!",
   "homepage": "http://monitor.ciro-maciel.me/",
   "repository": "https://github.com/cm-monitor/website.git",

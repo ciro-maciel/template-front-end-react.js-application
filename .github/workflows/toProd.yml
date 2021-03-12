@@ -33,14 +33,14 @@ jobs:
         if: success()
         run: npx semantic-release
         env:
-          GITHUB_TOKEN: 44d2ec3c494fc32a1c8c3ffa955df0681a136489
+          GITHUB_TOKEN: 3c773364199dda11acd405583682aa02f0a826d0
 
       - name: Configure AWS credentials
         if: success()
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: AKIAT6H6ASAMTEJYGVU7
-          aws-secret-access-key: 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
+          aws-access-key-id: AKIAT6H6ASAMSAJB6JON
+          aws-secret-access-key: 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
           aws-region: us-east-1
 
       - name: Remove files to the test website with the AWS CLI

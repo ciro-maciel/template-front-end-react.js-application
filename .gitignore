@@ -102,3 +102,12 @@ dist
 
 # TernJS port file
 .tern-port
+.DS_Store
+
+
+www/*
+www/assets/js/
+public/worker.js
+www/index.html
+www/analyzer.html
+!www/CHANGELOG.md

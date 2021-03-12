@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/cm-monitor/website/compare/v1.1.1...v1.1.2) (2021-03-12)
+
+
+### Bug Fixes
+
+* **worker:** scope ([a5afe4f](https://github.com/cm-monitor/website/commit/a5afe4f8a71ace34d724b922412a4c6d684e086d))
+
 ## [1.1.1](https://github.com/cm-monitor/website/compare/v1.1.0...v1.1.1) (2021-03-12)
 
 

@@ -16,6 +16,7 @@ export default {
 
       htmlString = htmlString.replace(new RegExp('Features', 'g'), '🎁 New Features');
       htmlString = htmlString.replace(new RegExp('Bug Fixes', 'g'), '⭐ Improvements');
+      htmlString = htmlString.replace(new RegExp('Performance Improvements', 'g'), '🎛️ Performance');
 
       return htmlString;
     }

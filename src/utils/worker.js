@@ -5,7 +5,7 @@ export default () => {
     window.addEventListener('load', () => {
       navigator.serviceWorker
         .register('/worker.js')
-        .then(({ scope }) => console.log(`👩🏻‍🔧 we're working 👨🏽‍🔧 in: `, scope.replace('assets/', '')))
+        .then(({ scope }) => console.log(`👩🏻‍🔧 we're working 👨🏽‍🔧 in: `, scope))
         .catch((err) => console.log(`there was a problem, 👩🏻‍🔧 let's check 👨🏽‍🔧`, err));
     });
   }

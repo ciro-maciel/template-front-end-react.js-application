@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/cm-monitor/website/compare/v1.0.1...v1.1.0) (2021-03-12)
+
+
+### Bug Fixes
+
+* **changelog:** add new type ([07a6b5a](https://github.com/cm-monitor/website/commit/07a6b5a1845de0455930948cc8c8fd6306e6b3ca))
+
+
+### Features
+
+* **worker:** add service worker ([eb59686](https://github.com/cm-monitor/website/commit/eb5968615d7f45d7351dcb3c6211d931a885ca7a))
+
 ## [1.0.1](https://github.com/cm-monitor/website/compare/v1.0.0...v1.0.1) (2021-03-12)
 
 ### Performance Improvements

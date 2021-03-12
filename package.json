@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.5.0",
-    "@ciro-maciel/utility": "^2.2.15",
+    "@ciro-maciel/utility": "^2.3.2",
     "antd": "^4.13.1",
     "jwt-decode": "^3.1.2",
     "moment": "^2.29.1",
@@ -40,7 +40,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "semantic-release": "^17.4.1"
+    "semantic-release": "^17.4.2"
   },
   "eslintIgnore": [
     "node_modules/*",

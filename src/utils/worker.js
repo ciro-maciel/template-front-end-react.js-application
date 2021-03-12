@@ -6,10 +6,10 @@ export default () => {
       navigator.serviceWorker
         .register('/assets/service-worker.js')
         .then(function (registration) {
-          console.log('👩🏻‍🔧 Workers 👨🏽‍🔧 registered: ', registration.scope);
+          console.log(`👩🏻‍🔧 we're working 👨🏽‍🔧 in: `, registration.scope);
         })
         .catch(function (err) {
-          console.log('👩🏻‍🔧 Workers 👨🏽‍🔧 registration failed: ', err);
+          console.log(`there was a problem, 👩🏻‍🔧 let's check 👨🏽‍🔧`, err);
         });
     });
   }

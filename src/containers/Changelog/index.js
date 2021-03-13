@@ -17,7 +17,7 @@ const Changelog = () => {
         <title>o que há de Novo? - ...</title>
       </Helmet>
       <Header />
-      <Body gutter={12} style={{ maxWidth: '900px' }}>
+      <Body style={{ maxWidth: '900px' }}>
         <Col xs={24} md={14}>
           <Typography.Title>o que há de Novo?</Typography.Title>
 

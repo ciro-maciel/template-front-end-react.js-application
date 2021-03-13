@@ -4,19 +4,19 @@ import { Row, Col } from 'antd';
 
 import { Link } from 'components';
 
-export default function() {
+export default function () {
   return (
     <Row
       style={{
         borderTop: '1px solid #ddd',
         height: '40px',
         width: '100%',
-        padding: '0 10px',
+        padding: '0 8px',
         display: 'flex',
         justifyContent: 'center',
       }}
     >
-      <Row style={{ maxWidth: '1440px', width: '100%', height: '100%', padding: '0 10px' }}>
+      <Row style={{ maxWidth: '1440px', width: '100%', height: '100%' }}>
         <Col md={12} xs={12} style={{ display: 'flex', alignItems: 'center' }}>
           <small>© 2021 ciro-maciel</small>
           <span className="hide-on-sm" style={{ margin: '0 5px' }}>

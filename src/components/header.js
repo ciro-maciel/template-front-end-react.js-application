@@ -21,12 +21,12 @@ const Header = () => {
         borderBottom: '1px solid #ddd',
         height: '60px',
         width: '100%',
-        padding: '0 10px',
+        padding: '0 8px',
         display: 'flex',
         justifyContent: 'center',
       }}
     >
-      <Row style={{ maxWidth: '1440px', width: '100%', height: '100%', padding: '0 10px' }}>
+      <Row style={{ maxWidth: '1440px', width: '100%', height: '100%' }}>
         <Col span={24} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>
             <Link to="/">

@@ -31,10 +31,10 @@ const Auth = () => {
         <title>Faça login em sua conta - ...</title>
       </Helmet>
       <Header />
-      <Body gutter={16} style={{ alignContent: 'center', justifyContent: 'center' }}>
+      <Body style={{ alignContent: 'center', justifyContent: 'center' }}>
         <Col xs={24} md={12} lg={8}>
           <div style={{ textAlign: 'center', margin: '30px 0' }}>
-            <img src={images.authWelcome} alt="" style={{ width: '250px' }} />
+            <img src={images.welcome} alt="" style={{ width: '250px' }} />
           </div>
           <Typography.Title level={3}>Construído para Pessoas</Typography.Title>
           <Typography.Paragraph>
@@ -76,7 +76,7 @@ const Auth = () => {
                       .then(({ tokenValidate }) => {
                         if (tokenValidate.code === 200) {
                           account.select(tokenValidate);
-                          history.push('/board');
+                          history.push('/dashboard');
                         }
                       });
                   }

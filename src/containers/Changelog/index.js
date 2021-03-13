@@ -2,16 +2,13 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
-import { Row, Col, Typography } from 'antd';
-
-import { Converter } from 'showdown';
+import { Col, Typography } from 'antd';
 
 import { Header, Body, Footer } from 'components';
 
-import { images, func } from 'utils';
+import { images, functions } from 'utils';
 
-const markdownChangelogB64 = require(process.env.CHANGELOG_PATH);
-const markdownConverter = new Converter();
+const htmlChangelog = require(process.env.CHANGELOG_PATH).default;
 
 const Changelog = () => {
   return (
@@ -20,7 +17,7 @@ const Changelog = () => {
         <title>o que há de Novo? - ...</title>
       </Helmet>
       <Header />
-      <Body gutter={12} style={{ maxWidth: '900px', alignItems: 'flex-start' }}>
+      <Body style={{ maxWidth: '900px' }}>
         <Col xs={24} md={14}>
           <Typography.Title>o que há de Novo?</Typography.Title>
 
@@ -42,7 +39,7 @@ const Changelog = () => {
         <Col span={24} style={{ marginTop: '20px' }}>
           <div
             dangerouslySetInnerHTML={{
-              __html: markdownConverter.makeHtml(func.parseMarkDown(markdownChangelogB64)),
+              __html: functions.parseChangelog(htmlChangelog),
             }}
           />
         </Col>

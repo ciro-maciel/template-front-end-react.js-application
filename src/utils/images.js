@@ -1,6 +1,5 @@
-import logo from '../assets/img/logo.png';
-import changelog from '../assets/img/changelog.png';
+import logo from '../assets/img/logo.jpg';
+import changelog from '../assets/img/changelog.jpg';
+import welcome from '../assets/img/welcome.jpg';
 
-import authWelcome from '../assets/img/auth-welcome.png';
-
-export { logo, changelog, authWelcome };
+export { logo, changelog, welcome };

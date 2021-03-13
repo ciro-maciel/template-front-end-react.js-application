@@ -1,5 +1,5 @@
 import * as images from './images';
 import worker from './worker';
-import func from './func';
+import functions from './functions';
 
-export { images, worker, func };
+export { images, worker, functions };

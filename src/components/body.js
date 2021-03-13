@@ -19,6 +19,7 @@ const Body = (props) => {
           maxWidth: '1440px',
           width: '100%',
           padding: '16px 0px',
+          alignContent: 'flex-start',
           ...style,
         }}
         {...rest}

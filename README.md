@@ -1,13 +1,5 @@
 ## Template Front-end React.js Application
 
-<h4 align="center">
-Hello! 👋My name is Ciro.
-
-I am 👨🏽‍🏫Entrepreneur in People and 👨🏽‍💻Software engineer 
-
-in a fantastic Family (team 👨🏽👩🏻👦🏻)
-</h4>
-
 <p align="center">
   <a href="#house-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

@@ -46,12 +46,12 @@ jobs:
       - name: Remove files to the test website with the AWS CLI
         if: success()
         run: |
-          aws s3 rm s3://monitor-website-prod --recursive
+          aws s3 rm s3://${{ secrets.AWS_S3_BUKET }} --recursive
 
       - name: Copy files to the test website with the AWS CLI
         if: success()
         run: |
-          aws s3 sync ./www s3://monitor-website-prod --acl public-read
+          aws s3 sync ./www s3://${{ secrets.AWS_S3_BUKET }} --acl public-read
 
       - name: Invalidation distribution with the AWS CLI
         if: success()

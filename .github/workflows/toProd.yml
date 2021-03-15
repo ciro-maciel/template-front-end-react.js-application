@@ -27,7 +27,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run website:build:prod
+        run: npm run application:build:prod
 
       - name: Release
         if: success()
@@ -43,12 +43,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: us-east-1
 
-      - name: Remove files to the test website with the AWS CLI
+      - name: Remove files to the application with the AWS CLI
         if: success()
         run: |
           aws s3 rm s3://${{ secrets.AWS_S3_BUKET }} --recursive
 
-      - name: Copy files to the test website with the AWS CLI
+      - name: Copy files to the application with the AWS CLI
         if: success()
         run: |
           aws s3 sync ./www s3://${{ secrets.AWS_S3_BUKET }} --acl public-read

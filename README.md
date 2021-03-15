@@ -41,6 +41,23 @@ Template code for ciro-maciel products and part of **Course:** Front-end profiss
 
 <br>
 
+**Run Tests**
+
+Unit test with Jest and Enzyme
+<br>
+```$ npm run test:jest```
+<br>
+<br>
+E2E test with Cypress
+<br>```$ npm run test:e2e```
+<br>
+<br>
+All test
+<br>
+```$ npm run test```
+
+<br>
+
 # :runner: Getting Started
 
 Run the following command in order to start the application in a development environment:

@@ -1,4 +1,4 @@
-## Template front-end React.js Application
+## Template Front-end React.js Application
 
 Hello! 👋My name is Ciro.
 

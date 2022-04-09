@@ -9,9 +9,9 @@
 
 <br>
 
-## :house: About the project
+### :house: About the project
 
-Template code for ciro-maciel products and part of **Course:** Front-end profissional com React.js
+Template code for RiLi SaaS products and part of **Course:** Front-end profissional com React.js
 
 <br>
 
@@ -27,11 +27,11 @@ Template code for ciro-maciel products and part of **Course:** Front-end profiss
 
 <br>
 
-# :construction_worker: Installation
+### :construction_worker: Installation
 
 **You need to install [Node.js](https://nodejs.org/en/download/) first, then in order to clone the project via HTTPS, run this command:**
 
-```$ git clone https://github.com/ciro-maciel/template-front-end-react.js-application.git```
+```$ git clone https://github.com/rili-saas/template-front-end-react.js-application.git```
 
 <br>
 
@@ -58,7 +58,7 @@ All test
 
 <br>
 
-# :runner: Getting Started
+### :runner: Getting Started
 
 Run the following command in order to start the application in a development environment:
 
@@ -67,11 +67,11 @@ Run the following command in order to start the application in a development env
 <br>
 
 
-# :bug: Issues
+### :bug: Issues
 
 Feel free to **file a new issue** with a respective title and description on the [Template Front-end React.js Application](https://github.com/ciro-maciel/template-front-end-react.js-application/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**!.
 
 <br>
 
 
-made with ❤️ by [ciro-maciel.me](https://ciro-maciel.me/)
+made with ❤️ by [RiLi Saas](https://rili.be/)

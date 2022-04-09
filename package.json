@@ -2,13 +2,13 @@
   "name": "template-application",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://ciro-maciel.me/",
-  "repository": "https://github.com/ciro-maciel/template-front-end-react.js-application",
+  "homepage": "https://rili.be/",
+  "repository": "https://github.com/rili-saas/template-front-end-react.js-application",
   "license": "CC-BY-NC-SA-4.0",
   "private": true,
   "author": {
     "name": "Ciro Cesar Maciel",
-    "email": "me@ciro-maciel.me"
+    "email": "ciro.maciel@rili.be"
   },
   "scripts": {
     "application:develop:run": "webpack serve --env=dev --config ./config/webpack.config.js",
@@ -104,5 +104,8 @@
       ]
     ],
     "preset": "angular"
+  },
+  "resolutions": {
+    "sharp": "^0.29.0"
   }
 }

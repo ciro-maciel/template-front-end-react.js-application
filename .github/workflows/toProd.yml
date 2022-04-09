@@ -7,7 +7,7 @@ on:
 jobs:
   worker:
     # https://docs.github.com/en/free-pro-team@latest/actions/reference/specifications-for-github-hosted-runners
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-18.04
     steps:
       - name: Get code
         uses: actions/checkout@v2
@@ -46,12 +46,12 @@ jobs:
       - name: Remove files to the application with the AWS CLI
         if: success()
         run: |
-          aws s3 rm s3://${{ secrets.AWS_S3_BUKET }} --recursive
+          aws s3 rm s3://${{ secrets.AWS_S3_APPLICATION_BUKET }} --recursive
 
       - name: Copy files to the application with the AWS CLI
         if: success()
         run: |
-          aws s3 sync ./www s3://${{ secrets.AWS_S3_BUKET }} --acl public-read
+          aws s3 sync ./www s3://${{ secrets.AWS_S3_APPLICATION_BUKET }} --acl public-read
 
       - name: Invalidation distribution with the AWS CLI
         if: success()

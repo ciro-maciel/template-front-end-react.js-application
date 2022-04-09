@@ -18,7 +18,7 @@ export default function () {
     >
       <Row style={{ maxWidth: '1440px', width: '100%', height: '100%' }}>
         <Col md={12} xs={12} style={{ display: 'flex', alignItems: 'center' }}>
-          <small>© 2021 ciro-maciel</small>
+          <small>© {new Date().getFullYear()} RiLi Application Template</small>
           <span className="hide-on-sm" style={{ margin: '0 5px' }}>
             |
           </span>
@@ -36,8 +36,8 @@ export default function () {
           <div>
             <small className="hide-on-sm"> feito com</small>
             <small> ❤️ por </small>
-            <Link to="https://ciro-maciel.me" target="_blank">
-              <small>ciro-maciel.me</small>
+            <Link to="https://rili.be" target="_blank">
+              <small>RiLi</small>
             </Link>
           </div>
         </Col>

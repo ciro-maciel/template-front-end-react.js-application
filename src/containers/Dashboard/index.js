@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
     <>
       <Helmet>
-        <title>Dashboard - mOnitor</title>
+        <title>Dashboard - RiLi Application Template</title>
       </Helmet>
       <Header />
       <Body style={{ maxWidth: '900px' }}>

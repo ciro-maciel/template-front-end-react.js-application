@@ -57,7 +57,7 @@ const Header = () => {
               <span className="hide-on-sm" style={{ margin: '0 5px' }}>
                 |
               </span>
-              <Link className="hide-on-sm" to="https://ciro-maciel.me/" target="_blank">
+              <Link className="hide-on-sm" to="https://rili.be/" target="_blank">
                 sobre Nós
               </Link>
             </div>
@@ -90,8 +90,8 @@ const Header = () => {
                   </Menu.Item>
                   <Menu.Divider />
                   <Menu.Item key="about">
-                    <Link to="http://ciro-maciel.me/" target="_blank">
-                      sobre o mOnitor
+                    <Link to="http://rili.be/" target="_blank">
+                      sobre o RiLi Application Template
                     </Link>
                   </Menu.Item>
                 </Menu>

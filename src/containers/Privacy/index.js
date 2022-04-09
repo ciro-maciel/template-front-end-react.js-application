@@ -11,7 +11,7 @@ const Privecy = () => {
   return (
     <>
       <Helmet>
-        <title>Política de Privacidade - mOnitor</title>
+        <title>Política de Privacidade - RiLi Application Template</title>
       </Helmet>
       <Header />
       <Body style={{ maxWidth: '900px' }}>

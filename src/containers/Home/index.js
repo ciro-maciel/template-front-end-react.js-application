@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>mOnitor by ciro-maciel</title>
+        <title>RiLi Application Template</title>
       </Helmet>
       <Header />
       <Body>

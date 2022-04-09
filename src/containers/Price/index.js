@@ -10,7 +10,7 @@ const Price = () => {
   return (
     <>
       <Helmet>
-        <title>Preços - mOnitor </title>
+        <title>Preços - RiLi Application Template </title>
       </Helmet>
       <Header />
       <Body style={{ maxWidth: '1200px', flexDirection: 'column', alignItems: 'center' }}>
@@ -21,7 +21,7 @@ const Price = () => {
 
         <Row style={{ padding: '32px 0', flexDirection: 'column', maxWidth: '900px', width: '100%' }}>
           <Alert
-            message="mOnitor agora é gratuito para o uso Pessoal"
+            message="RiLi Application Template"
             description={
               <>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
@@ -143,7 +143,7 @@ const Price = () => {
           </Row>
 
           <Col xs={24} md={12}>
-            <Typography.Title level={3}>Quem mantém o mOnitor?</Typography.Title>
+            <Typography.Title level={3}>Quem mantém o RiLi Application Template?</Typography.Title>
             <Typography.Paragraph>
               Sou 👨🏽‍🏫Empreendedor em Pessoas e 👨🏽‍💻Engenheiro de software em uma Família fantástica (equipe 👨🏽👩🏻👦🏻), somos
               apaixonados por tecnologia e inovação. Você pode entrar em contato comigo através do do meu{' '}
@@ -166,7 +166,7 @@ const Price = () => {
               excluir sua conta por completo.
             </Typography.Paragraph>
 
-            <Typography.Title level={3}>Se eu não gostar do mOnitor, posso solicitar um reembolso?</Typography.Title>
+            <Typography.Title level={3}>Se eu não gostar do RiLi Application Template, posso solicitar um reembolso?</Typography.Title>
             <Typography.Paragraph>
               Caso você não esteja satisfeito com o serviço, você pode solicitar um reembolso em 10 dias a partir do seu
               último pagamento.

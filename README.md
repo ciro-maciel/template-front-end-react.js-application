@@ -74,4 +74,4 @@ Feel free to **file a new issue** with a respective title and description on the
 <br>
 
 
-made with ❤️ by [RiLi Saas](https://rili.be/)
+made with ❤️ by [RiLi SaaS](https://rili.be/)

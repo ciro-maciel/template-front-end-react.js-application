@@ -15,7 +15,7 @@ Template code for RiLi SaaS products and part of **Course:** Front-end profissio
 
 <br>
 
-## :computer: Technologies
+### :computer: Technologies
 
 - [ReactJS](https://reactjs.org/)
 - [Ant Design](https://github.com/ant-design/ant-design/)

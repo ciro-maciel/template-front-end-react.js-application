@@ -11,7 +11,8 @@
 
 ### :house: About the project
 
-Template code for RiLi SaaS products and part of **Course:** Front-end profissional com React.js
+SaaS starter kit, foundation for your business
+
 
 <br>
 
@@ -31,7 +32,7 @@ Template code for RiLi SaaS products and part of **Course:** Front-end profissio
 
 **You need to install [Node.js](https://nodejs.org/en/download/) first, then in order to clone the project via HTTPS, run this command:**
 
-```$ git clone https://github.com/rili-saas/template-front-end-react.js-application.git```
+```$ git clone https://github.com/rili-saas-unique/template-front-end-react.js-application.git```
 
 <br>
 

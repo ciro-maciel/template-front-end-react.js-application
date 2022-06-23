@@ -1,4 +1,4 @@
-## Template Front-end React.js Application
+## Front-end React.js Application
 
 <p align="center">
   <a href="#house-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -32,7 +32,7 @@ SaaS starter kit, foundation for your business
 
 **You need to install [Node.js](https://nodejs.org/en/download/) first, then in order to clone the project via HTTPS, run this command:**
 
-```$ git clone https://github.com/rili-saas-unique/template-front-end-react.js-application.git```
+```$ git clone https://github.com/rili-saas-unique/front-end-react.js-application.git```
 
 <br>
 
@@ -70,7 +70,7 @@ Run the following command in order to start the application in a development env
 
 ### :bug: Issues
 
-Feel free to **file a new issue** with a respective title and description on the [Template Front-end React.js Application](https://github.com/ciro-maciel/template-front-end-react.js-application/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**!.
+Feel free to **file a new issue** with a respective title and description on the [Front-end React.js Application](https://github.com/rili-saas-unique/front-end-react.js-application/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**!.
 
 <br>
 
